@@ -240,7 +240,11 @@ length(unique(SAR_up$Description.x))
 #Make a little table to summarize what I have so far for DAPs (diff. abundant proteins)
 summ_DAPs <- data.frame(
   DAPs = c("Increased vir", "Increased avr", "Increased vir and avr"),
-  Rep1 = c(length(unique(p1_inc_vir$Description)), length(unique(p1_inc_avr$Description)), length(unique(p1_inc_vir_avr$Description))), 
-  Rep2 = c(length(unique(p2_inc_vir$Description)), length(unique(p2_inc_avr$Description)), length(unique(p2_inc_vir_avr$Description))), 
+  Rep1 = c(length(unique(p1_inc_vir$Description)), 
+           length(unique(p1_inc_avr$Description)), 
+           length(unique(p1_inc_vir_avr$Description))), 
+  Rep2 = c(length(unique(p2_inc_vir$Description)), 
+           length(unique(p2_inc_avr$Description)), 
+           length(unique(p2_inc_vir_avr$Description))), 
   Both = c("x", "x", length(unique(SAR_up$Description.x)))) %>% 
   print()
